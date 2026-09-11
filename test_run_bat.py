@@ -35,11 +35,11 @@ class TestRunBat(unittest.TestCase):
         self.assertIn("import psutil", content, "应检查 psutil 是否已安装")
         self.assertIn("pip install psutil", content, "缺失时应安装 psutil")
 
-    def test_bat_calls_script(self):
-        """应调用 kill_process.py。"""
+    def test_bat_starts_server(self):
+        """应调用 server.py（启动网页 UI）。"""
         with open(BAT_PATH, "r", encoding="utf-8", errors="ignore") as f:
             content = f.read()
-        self.assertIn("kill_process.py", content, "应调用 kill_process.py")
+        self.assertIn("server.py", content, "应调用 server.py")
 
 
 if __name__ == "__main__":

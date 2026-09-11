@@ -4,6 +4,7 @@ cd /d "%~dp0"
 
 REM ============================================================
 REM  AutoKill Process Killer v1.0 - launcher
+REM  Starts local web server, opens browser UI.
 REM  Requires: Python 3.8+ (install from python.org, check
 REM  "Add python.exe to PATH" during install)
 REM ============================================================
@@ -42,9 +43,9 @@ if %errorlevel% neq 0 (
     )
 )
 
-REM 4. Run the killer script
-echo.
-%PY_EXE% kill_process.py
+REM 4. Start the local web server (opens browser automatically)
+echo Starting AutoKill web UI...
+%PY_EXE% server.py
 set "SCRIPT_EXIT=%errorlevel%"
 
 if not "%SCRIPT_EXIT%"=="0" (

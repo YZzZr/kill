@@ -1,0 +1,19 @@
+# Python 缓存
+__pycache__/
+*.py[cod]
+*.pyo
+
+# 虚拟环境
+venv/
+.venv/
+
+# 编辑器
+.vscode/
+.idea/
+
+# 系统文件
+Thumbs.db
+Desktop.ini
+
+# 用户备份文件
+*.zip
